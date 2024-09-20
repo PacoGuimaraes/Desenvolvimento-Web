@@ -1,0 +1,23 @@
+*{
+    font-family: "Roboto", sans-serif;
+}
+
+
+
+.fonte-fixo{
+    font-size: 50px;
+    background-color: rgb(23, 189, 92);
+    height: 500px;
+    width: 1080px;
+}
+.fonte-relativo{
+    font-size: 50px;
+    background-color: blue;
+    height: 70vh;
+    width: 80%;
+}
+span a{
+    background-color: rgb(18, 180, 249);
+    font-weight: bold; 
+    color: rgb(255, 0, 0);
+}
