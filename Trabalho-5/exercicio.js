@@ -18,8 +18,8 @@ const meuObjeto = {
   texto: "Uma propiedade",
   numero: 2,
   endereco: {
-    rua: "Ruan Henrique stamile coutinho",
-    numero: 45 
+    rua: "Rua desembargador",
+    numero: 59
   }
 }
 
