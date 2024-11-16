@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Trabalho Desenvolvimento</title>
+  <link rel="stylesheet" type="text/css" href="estilos.css"> <!-- CSS externo -->
+</head>
+<body>
+  <h1 style="color: rgb(255, 0, 0);">Este titulo tem CSS inline</h1> <!-- CSS inline -->
+  <p id="paragrafo">Este paragrafo sera alterado pelo JavaScript, caso voce clique no botao!!</p>
+  <button onclick="mudarTexto()">Clique aqui para mudar o texto</button>
+  
+  <script>
+    function mudarTexto() {
+      document.getElementById("paragrafo").innerHTML = "O texto foi alterado pelo JavaScript!";
+    }
+  </script>
+</body>
+</html>
