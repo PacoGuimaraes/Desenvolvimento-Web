@@ -8,6 +8,10 @@ const loginHeader = document.getElementById("header-login");
 const loginPage = document.getElementById("login-page");
 const login = document.getElementById("login");
 
+const masculinoBtn = document.getElementById("masculino-btn");
+const femininoBtn = document.getElementById("feminino-btn");
+const todosBtn = document.getElementById("todos-btn");
+
 const manipulaClick = (e) => {
     const id = e.currentTarget.dataset.id;
     const url = `detalhes.html?id=${id}`;
@@ -57,6 +61,15 @@ const montaCard = (atleta) => {
     return cartao;
 };
 
+const exibeJogadores = (time) => {
+    container.innerHTML = "";  
+    pega_json(`${url}${time}`).then((jogadores) => {
+        jogadores.forEach((jogador) => {
+            container.appendChild(montaCard(jogador));
+        });
+    });
+};
+
 const verificaLogin = () => {
     const logado = localStorage.getItem("logado");
 
@@ -68,9 +81,7 @@ const verificaLogin = () => {
         loginPage.style.display = "none";
         login.style.display = "none";
 
-        pega_json(`${url}masculino`).then((r) => {
-            r.forEach((ele) => container.appendChild(montaCard(ele)));
-        });
+        exibeJogadores("masculino");  
     } else {
         loginForm.style.display = "block";
         jogadoresSection.style.display = "none";
@@ -100,3 +111,15 @@ document.getElementById("logout").onclick = () => {
 
 document.addEventListener("DOMContentLoaded", verificaLogin);
 
+masculinoBtn.onclick = () => {
+    exibeJogadores("masculino");
+};
+
+femininoBtn.onclick = () => {
+    exibeJogadores("feminino");
+};
+
+todosBtn.onclick = () => {
+    exibeJogadores("masculino");  
+    exibeJogadores("feminino");   
+};

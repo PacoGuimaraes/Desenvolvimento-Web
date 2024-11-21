@@ -4,6 +4,8 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    max-height: 100vh; /* Define a altura máxima para o body */
+    overflow: hidden;  /* Evita que o conteúdo ultrapasse a altura da tela */
 }
 
 header {
@@ -13,6 +15,7 @@ header {
     justify-content: space-between;
     align-items: center;
     background-color: black;
+    z-index: 1000;
 }
 
 header ul {
@@ -141,6 +144,8 @@ header #logout:hover {
     flex-wrap: wrap;
     justify-content: center;
     margin-top: 30px;
+    max-height: 80vh; /* Limita a altura do container */
+    overflow: auto; /* Adiciona a rolagem se necessário */
 }
 
 #container > article {
@@ -242,7 +247,6 @@ header #logout:hover {
     background-color: #ccc;
 }
 
-
 #container > article button {
     background-color: #ffffff;
     color: rgb(0, 0, 0);
@@ -264,7 +268,6 @@ header #logout:hover {
     background-color: #ccc2c2;
 }
 
-
 #container > article {
     display: flex;
     flex-direction: column; 
@@ -273,3 +276,15 @@ header #logout:hover {
     text-align: center; 
 }
 
+/* Detalhes Container */
+.detalhes-container {
+    background-color: #fff;
+    padding: 20px;
+    max-width: 900px;
+    max-height: 768px; /* Limita a altura da página de detalhes */
+    overflow: auto;
+    margin: 20px auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
