@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./Assets/Escudo_Botafogo.png" type="image/png">
+    <title>FOGÃO.com</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="botafeminino.js"></script>
+    <script src="sha256.js"></script>
+    <script src="codigo.js" defer></script>
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Gothic+A1:wght@900&display=swap');
+    </style>
+</head>
+<body>
+    <header id="header-login">
+        <ul>
+            <li id="logo-left"><img src="./Assets/Escudo_Botafogo.png" alt="Escudo Botafogo"></li>
+            <li id="pesquisa">
+                <input id="pesquisar" type="text" placeholder="Digite o nome do jogador(a)">
+            </li>
+            <li id="pesquisa-filter">
+                <div id="filter-buttons" class="dropdown">
+                    <button class="dropbtn">Filtrar</button>
+                    <div class="dropdown-content">
+                        <a href="#" id="masculino-btn">Masculino</a>
+                        <a href="#" id="feminino-btn">Feminino</a>
+                        <a href="#" id="todos-btn">Todos</a>
+                    </div>
+                </div>
+            </li>
+            <li><button id="logout" style="display: none;">Sair</button></li>
+        </ul>
+    </header>
+    <div id="login">
+        <div id="login-page">
+            <h1>Bem-vindo ao  FOGÃO</h1>
+            <p>Essa plataforma foi criada para facilitar a vida dos atletas do Botafogo e seus torcedores</p>
+        </div>
+        <div id="login-form">
+            <input id="senha" type="password" placeholder="Senha">
+            <button id="botao">ENTRAR</button>
+            <p>A senha para login é: <b>MELHORDOMUNDO</b></p>
+        </div>
+    </div>
+    <div id="jogadores" style="display: none;">
+        <div id="container"></div>
+    </div>
+</body>
+</html>
