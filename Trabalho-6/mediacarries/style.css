@@ -1,0 +1,33 @@
+#minha-div {
+    width: 80%;
+    margin: 0 auto;
+    height: 50vh;
+    background-color: brown;
+}
+
+#sua-div {
+    width: 80%;
+    margin: 0 auto;
+    height: 50vh;
+}
+
+@media screen and (min-width: 360px) {
+    #minha-div {
+        background-color: blue;
+    }
+}
+
+@media screen and (min-width: 720px) {
+    #minha-div {
+        background-color: purple;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    #minha-div {
+        background-color: purple;
+    }
+    #sua-div {
+        background-color: red;
+    }
+}
